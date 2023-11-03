@@ -1,3 +1,6 @@
+let btn = document.getElementById("btn");
+
+
 function handleClick() {
   console.log("Button is Clicked.");
   btn.style.background = "white";
@@ -15,7 +18,7 @@ function mouseOut() {
   btn.style.background = "blue";
   btn.style.color = "white";
 }
-let btn = document.getElementById("btn");
+
 
 btn.addEventListener("mouseover", mouseOver);
 btn.addEventListener("click", handleClick);
