@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Submit Form</title>
+		<link rel="stylesheet" href="submitForm.css" />
+    <style>
+     .container{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    #btn {
+        background-color: blue;
+        color: white;
+        padding: 5px;
+        font-family: Helvetica;
+        margin: 50px;
+    }
+    </style>
+	</head>
+	<body>
+		<div class="container">
+			<button id="btn">Submit</button>
+		</div>
+
+		<script>
+			function handleClick() {
+				console.log("Button is Clicked.");
+				btn.style.background = "white";
+				btn.style.color = "black";
+				btn.innerHTML = "Submitted";
+				btn.removeEventListener("mouseout", mouseOut);
+				btn.removeEventListener("mouseover", mouseOver);
+			}
+			function mouseOver() {
+				btn.style.background = "green";
+				btn.style.color = "black";
+			}
+
+			function mouseOut() {
+				btn.style.background = "blue";
+				btn.style.color = "white";
+			}
+			let btn = document.getElementById("btn");
+
+			btn.addEventListener("mouseover", mouseOver);
+			btn.addEventListener("click", handleClick);
+			btn.addEventListener("mouseout", mouseOut);
+		</script>
+	</body>
+</html>
